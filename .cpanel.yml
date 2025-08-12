@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/algarabi/public_html/git.algarabiabar.com
+    - /usr/bin/rsync -a --delete \
+        --exclude=".git" \
+        $PWD/ $DEPLOYPATH/
